@@ -9,25 +9,21 @@ Console.Clear();
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if(num<100)
+if (num < 100)
 {
- Console.WriteLine("третьей цифры нет");   
+    Console.WriteLine("третьей цифры нет");
 }
-else if(num<1000)
+
+else if (num < 1000)
 {
-    num = num%10;
-    Console.WriteLine(num);
+    Console.WriteLine(num = num % 10);
 }
-else if(num<10000)
+
+else if (num > 1000)
 {
-    num = num%100;
-    num = num/10;
-    Console.WriteLine(num);
+    while (num > 1000)
+    {
+        num = num / 10;
+    }
+    Console.WriteLine(num = num % 10);
 }
-else if(num<100000)
-{
-    num = num%1000;
-    num = num/100;
-    Console.WriteLine(num);
-}
-else Console.WriteLine("Слишком длинное число");
